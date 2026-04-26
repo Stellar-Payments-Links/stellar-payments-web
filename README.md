@@ -56,6 +56,8 @@ Create -> Share -> Pay
    - `NEXT_PUBLIC_API_URL=https://<your-backend-domain>`
    - `NEXT_PUBLIC_HORIZON_URL=https://horizon-testnet.stellar.org`
 4. Deploy
+5. Production app URL:
+   - `https://stellar-payments-web.vercel.app/`
 
 ## Contribution Guide Summary
 See `CONTRIBUTING.md` for setup, issue workflow, and coding conventions.
