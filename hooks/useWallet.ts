@@ -11,15 +11,19 @@ export function useWallet() {
     setWallet(getWallet());
   }, []);
 
-  function handleCreate() {
-    const created = createWallet();
-    setWallet(created);
-    setError(null);
+  async function handleCreate() {
+    try {
+      const created = await createWallet();
+      setWallet(created);
+      setError(null);
+    } catch {
+      setError("Unable to create wallet.");
+    }
   }
 
-  function handleImport(secret: string) {
+  async function handleImport(secret: string) {
     try {
-      const imported = importWallet(secret);
+      const imported = await importWallet(secret);
       setWallet(imported);
       setError(null);
     } catch {

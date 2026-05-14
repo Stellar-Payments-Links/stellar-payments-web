@@ -1,9 +1,6 @@
 "use client";
 
-import { Horizon, Keypair, Networks, Operation, TransactionBuilder, Asset, Memo } from "stellar-sdk";
-
 const HORIZON_URL = process.env.NEXT_PUBLIC_HORIZON_URL || "https://horizon-testnet.stellar.org";
-const NETWORK_PASSPHRASE = Networks.TESTNET;
 const WALLET_KEY = "stellar_payments_wallet";
 
 export type LocalWallet = {
@@ -11,16 +8,35 @@ export type LocalWallet = {
   secret: string;
 };
 
-const server = new Horizon.Server(HORIZON_URL);
+let server: any = null;
 
-export function createWallet(): LocalWallet {
+async function getStellarSdk() {
+  const stellar = await import("stellar-sdk");
+  return stellar;
+}
+
+async function getServer() {
+  if (!server) {
+    const stellar = await getStellarSdk();
+    const stellarAny = stellar as any;
+    const Server = stellarAny.Horizon?.Server || stellarAny.Server || stellarAny.Horizon;
+    server = new Server(HORIZON_URL);
+  }
+  return server;
+}
+
+export async function createWallet(): Promise<LocalWallet> {
+  const stellar = await getStellarSdk();
+  const Keypair = stellar.Keypair;
   const pair = Keypair.random();
   const wallet = { publicKey: pair.publicKey(), secret: pair.secret() };
   localStorage.setItem(WALLET_KEY, JSON.stringify(wallet));
   return wallet;
 }
 
-export function importWallet(secret: string): LocalWallet {
+export async function importWallet(secret: string): Promise<LocalWallet> {
+  const stellar = await getStellarSdk();
+  const Keypair = stellar.Keypair;
   const pair = Keypair.fromSecret(secret.trim());
   const wallet = { publicKey: pair.publicKey(), secret: pair.secret() };
   localStorage.setItem(WALLET_KEY, JSON.stringify(wallet));
@@ -38,11 +54,21 @@ export async function buildAndSubmitPayment(params: {
   amount: string;
   memo?: string;
 }) {
+  const stellar = await getStellarSdk();
+  const Keypair = stellar.Keypair;
+  const Networks = stellar.Networks;
+  const Operation = stellar.Operation;
+  const TransactionBuilder = stellar.TransactionBuilder;
+  const Asset = stellar.Asset;
+  const Memo = stellar.Memo;
+
   const source = Keypair.fromSecret(params.sourceSecret);
+  const server = await getServer();
   const account = await server.loadAccount(source.publicKey());
+
   const txBuilder = new TransactionBuilder(account, {
     fee: "100",
-    networkPassphrase: NETWORK_PASSPHRASE
+    networkPassphrase: Networks.TESTNET
   }).addOperation(
     Operation.payment({
       destination: params.destination,
