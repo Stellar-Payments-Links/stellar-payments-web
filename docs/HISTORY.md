@@ -49,3 +49,4 @@
 - docs: document locale persistence in I18N guide
 - chore: finalize package scripts for CI
 - docs: list new components in README architecture
+- chore: prepare 0.2.0 web release notes
