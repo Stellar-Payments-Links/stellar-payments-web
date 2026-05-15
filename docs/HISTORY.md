@@ -9,3 +9,4 @@
 - refactor: use PageHeader on create page
 - refactor: use PageHeader on dashboard
 - feat: add LoadingButton with spinner state
+- feat: add CopyButton for payment URLs
