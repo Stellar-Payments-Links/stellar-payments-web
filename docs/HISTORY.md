@@ -20,3 +20,4 @@
 - feat: show QR code and loading on pay page
 - feat: add English and French translation catalogs
 - feat: add locale switcher component
+- feat: add Freighter wallet detection hook
