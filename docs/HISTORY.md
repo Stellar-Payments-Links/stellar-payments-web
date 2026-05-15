@@ -28,3 +28,4 @@
 - docs: update roadmap with completed Phase 2 milestones
 - docs: add i18n contributor guide
 - docs: start web changelog
+- chore: add PR template with accessibility checklist
