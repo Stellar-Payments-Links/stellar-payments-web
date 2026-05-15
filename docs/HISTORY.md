@@ -19,3 +19,4 @@
 - feat: add QR code component for payment links
 - feat: show QR code and loading on pay page
 - feat: add English and French translation catalogs
+- feat: add locale switcher component
