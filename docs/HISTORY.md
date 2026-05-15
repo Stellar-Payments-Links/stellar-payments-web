@@ -31,3 +31,4 @@
 - chore: add PR template with accessibility checklist
 - feat: support pagination params in API client
 - feat: add SiteNav with locale switcher
+- refactor: use SiteNav in root layout
