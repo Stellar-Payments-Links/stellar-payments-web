@@ -34,3 +34,4 @@
 - refactor: use SiteNav in root layout
 - feat: wire landing page CTAs to i18n catalog
 - refactor: use explorer helper on transaction detail
+- feat: improve pay page accessibility roles
