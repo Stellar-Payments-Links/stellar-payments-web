@@ -1,3 +1,5 @@
+import { parseApiError } from "@/utils/parseApiError";
+
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
 
 export type PaymentLink = {
@@ -25,8 +27,8 @@ async function request<T>(path: string, options?: RequestInit): Promise<T> {
     ...options
   });
   if (!res.ok) {
-    const error = await res.text();
-    throw new Error(error || "Request failed");
+    const message = await parseApiError(res);
+    throw new Error(message);
   }
   return res.json() as Promise<T>;
 }
@@ -47,5 +49,13 @@ export const api = {
       body: JSON.stringify(body)
     }),
 
-  getTransactions: () => request<{ transactions: TransactionRecord[] }>("/transactions")
+  getTransactions: (params?: { page?: number; limit?: number }) => {
+    const q = new URLSearchParams();
+    if (params?.page) q.set("page", String(params.page));
+    if (params?.limit) q.set("limit", String(params.limit));
+    const suffix = q.toString() ? `?${q}` : "";
+    return request<{ transactions: TransactionRecord[]; pagination?: { page: number; limit: number; total: number } }>(
+      `/transactions${suffix}`
+    );
+  }
 };
