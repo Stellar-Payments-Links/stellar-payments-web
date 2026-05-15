@@ -1,0 +1,1 @@
+- chore: pin Node.js 20 via .nvmrc
