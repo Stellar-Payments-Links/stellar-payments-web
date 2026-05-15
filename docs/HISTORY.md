@@ -39,3 +39,4 @@
 - docs: note QR download in README features
 - docs: document Freighter optional wallet flow
 - docs: add test command to contributing notes
+- chore: add qrcode dependency lock entry
