@@ -44,3 +44,4 @@
 - feat: polish create page field placeholders
 - feat: truncate payment id in dashboard list
 - docs: document transaction detail route
+- chore: align SiteNav aria label
