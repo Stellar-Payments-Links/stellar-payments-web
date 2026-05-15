@@ -40,3 +40,4 @@
 - docs: document Freighter optional wallet flow
 - docs: add test command to contributing notes
 - chore: add qrcode dependency lock entry
+- docs: expand changelog for 0.2.0 release
