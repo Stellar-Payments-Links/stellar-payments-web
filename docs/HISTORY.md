@@ -21,3 +21,4 @@
 - feat: add English and French translation catalogs
 - feat: add locale switcher component
 - feat: add Freighter wallet detection hook
+- feat: integrate Freighter connect on WalletCard
