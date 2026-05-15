@@ -23,3 +23,4 @@
 - feat: add Freighter wallet detection hook
 - feat: integrate Freighter connect on WalletCard
 - test: add validator unit tests
+- ci: add GitHub Actions workflow for web app
