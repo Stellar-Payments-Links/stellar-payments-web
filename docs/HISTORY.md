@@ -11,3 +11,4 @@
 - feat: add LoadingButton with spinner state
 - feat: add CopyButton for payment URLs
 - feat: add FormField with inline error display
+- feat: add dashboard EmptyState with CTA
