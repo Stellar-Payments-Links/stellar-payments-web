@@ -4,3 +4,4 @@
 - feat: add API error parsing utility
 - refactor: use parseApiError in API client
 - feat: expand client-side validators for payment form
+- feat: add reusable PageHeader component
