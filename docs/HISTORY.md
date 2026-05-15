@@ -7,3 +7,4 @@
 - feat: add reusable PageHeader component
 - refactor: use PageHeader on landing page
 - refactor: use PageHeader on create page
+- refactor: use PageHeader on dashboard
