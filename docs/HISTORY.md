@@ -13,3 +13,4 @@
 - feat: add FormField with inline error display
 - feat: add dashboard EmptyState with CTA
 - feat: add form validation and loading on create page
+- feat: improve dashboard with loading and empty state
