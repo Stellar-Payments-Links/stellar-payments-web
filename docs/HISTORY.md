@@ -3,3 +3,4 @@
 - chore: ensure Next.js build output is gitignored
 - feat: add API error parsing utility
 - refactor: use parseApiError in API client
+- feat: expand client-side validators for payment form
