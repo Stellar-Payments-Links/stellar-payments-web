@@ -42,3 +42,4 @@
 - chore: add qrcode dependency lock entry
 - docs: expand changelog for 0.2.0 release
 - feat: polish create page field placeholders
+- feat: truncate payment id in dashboard list
