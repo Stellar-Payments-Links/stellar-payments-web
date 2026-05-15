@@ -46,3 +46,4 @@
 - docs: document transaction detail route
 - chore: align SiteNav aria label
 - feat: add wallet section aria-labelledby
+- docs: document locale persistence in I18N guide
