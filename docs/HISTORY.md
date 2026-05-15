@@ -17,3 +17,4 @@
 - feat: add Stellar Expert URL helper
 - feat: add transaction detail page with explorer link
 - feat: add QR code component for payment links
+- feat: show QR code and loading on pay page
