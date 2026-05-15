@@ -32,3 +32,4 @@
 - feat: support pagination params in API client
 - feat: add SiteNav with locale switcher
 - refactor: use SiteNav in root layout
+- feat: wire landing page CTAs to i18n catalog
