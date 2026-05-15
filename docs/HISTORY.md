@@ -45,3 +45,4 @@
 - feat: truncate payment id in dashboard list
 - docs: document transaction detail route
 - chore: align SiteNav aria label
+- feat: add wallet section aria-labelledby
