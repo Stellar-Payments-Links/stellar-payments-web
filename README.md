@@ -32,6 +32,9 @@ Create -> Share -> Pay
 - Backend API for payment metadata + transaction audit trail
 - Horizon network for transaction settlement and verification
 
+## Node version
+Use `nvm use` with the included `.nvmrc` (Node 20).
+
 ## Setup Instructions
 1. Install dependencies:
    - `npm install`

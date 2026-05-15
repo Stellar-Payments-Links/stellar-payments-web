@@ -24,3 +24,4 @@
 - feat: integrate Freighter connect on WalletCard
 - test: add validator unit tests
 - ci: add GitHub Actions workflow for web app
+- docs: document Node version in README
