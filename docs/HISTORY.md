@@ -36,3 +36,4 @@
 - refactor: use explorer helper on transaction detail
 - feat: improve pay page accessibility roles
 - chore: bump web app version to 0.2.0
+- docs: note QR download in README features
