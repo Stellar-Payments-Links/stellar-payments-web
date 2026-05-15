@@ -27,3 +27,4 @@
 - docs: document Node version in README
 - docs: update roadmap with completed Phase 2 milestones
 - docs: add i18n contributor guide
+- docs: start web changelog
