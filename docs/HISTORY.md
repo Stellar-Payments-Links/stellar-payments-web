@@ -48,3 +48,4 @@
 - feat: add wallet section aria-labelledby
 - docs: document locale persistence in I18N guide
 - chore: finalize package scripts for CI
+- docs: list new components in README architecture
