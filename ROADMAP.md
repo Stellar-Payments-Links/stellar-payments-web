@@ -6,8 +6,8 @@
 - Basic transaction list dashboard
 
 ## Phase 2: Expansion
-- QR code support for in-person payments
-- Better validation and UX states
+- QR codes and form validation (done)
+- i18n EN/FR catalogs (done)
 - Localization for additional languages
 
 ## Phase 3: Advanced Features
