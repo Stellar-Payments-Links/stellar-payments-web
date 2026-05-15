@@ -16,3 +16,4 @@
 - feat: improve dashboard with loading and empty state
 - feat: add Stellar Expert URL helper
 - feat: add transaction detail page with explorer link
+- feat: add QR code component for payment links
