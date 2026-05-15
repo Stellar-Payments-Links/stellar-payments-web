@@ -1,2 +1,3 @@
 - chore: pin Node.js 20 via .nvmrc
 - chore: add .env.example for local development
+- chore: ensure Next.js build output is gitignored
