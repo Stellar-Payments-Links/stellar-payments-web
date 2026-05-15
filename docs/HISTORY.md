@@ -26,3 +26,4 @@
 - ci: add GitHub Actions workflow for web app
 - docs: document Node version in README
 - docs: update roadmap with completed Phase 2 milestones
+- docs: add i18n contributor guide
