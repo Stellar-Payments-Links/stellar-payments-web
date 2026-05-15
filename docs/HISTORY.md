@@ -6,3 +6,4 @@
 - feat: expand client-side validators for payment form
 - feat: add reusable PageHeader component
 - refactor: use PageHeader on landing page
+- refactor: use PageHeader on create page
