@@ -22,3 +22,4 @@
 - feat: add locale switcher component
 - feat: add Freighter wallet detection hook
 - feat: integrate Freighter connect on WalletCard
+- test: add validator unit tests
