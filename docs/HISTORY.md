@@ -33,3 +33,4 @@
 - feat: add SiteNav with locale switcher
 - refactor: use SiteNav in root layout
 - feat: wire landing page CTAs to i18n catalog
+- refactor: use explorer helper on transaction detail
