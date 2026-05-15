@@ -29,3 +29,4 @@
 - docs: add i18n contributor guide
 - docs: start web changelog
 - chore: add PR template with accessibility checklist
+- feat: support pagination params in API client
